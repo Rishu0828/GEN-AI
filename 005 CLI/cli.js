@@ -1,0 +1,1 @@
+console.log("Hlw beta open cli");
