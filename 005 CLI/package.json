@@ -7,10 +7,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin" : {
-  "beta" : "./cli.js"
+  "bin": {
+    "beta": "./cli.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@langchain/groq": "^1.3.1",
+    "@langchain/langgraph": "^1.7.3",
+    "dotenv": "^18.0.10",
+    "langchain": "^1.6.3",
+    "readline": "^1.3.0",
+    "zod": "^4.6.7"
+  }
 }

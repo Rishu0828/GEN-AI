@@ -1,1 +1,5 @@
-console.log("Hlw beta open cli");
+#!/usr/bin/env node
+
+import main from "./src/main.js";
+
+main();
