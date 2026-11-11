@@ -26,11 +26,18 @@ export default async function initGraph() {
   while (true) {
     const userInput = await rl.question("[User]: ");
 
+    if (userInput.toLowerCase() === "/bye") {
+      break;
+    }
+
     messages.push(new HumanMessage(userInput));
 
-    const response = await graph.invoke({
-      messages,
-    });
+    const response = await graph.invoke(
+      {
+        messages,
+      },
+      { context: { username: "Rishu" } },
+    );
 
     messages = response.messages;
   }

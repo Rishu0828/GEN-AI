@@ -7,7 +7,9 @@ import { AIMessage } from "langchain";
  * @returns {Promise<Object>} - The updated state after processing the LLM node
  */
 
-export async function LLMNode(state) {
+export async function LLMNode(state, config) {
+  //   console.log(config);
+
   const model = new ChatGroq({
     model: "openai/gpt-oss-120b",
     apiKey: (await getApiKey()).apiKey,
@@ -24,7 +26,7 @@ export async function LLMNode(state) {
   }
 
   process.stdout.write("\n");
-  
+
   return {
     messages: [...state.messages, new AIMessage(aiMessage)],
   };
