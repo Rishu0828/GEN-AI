@@ -23,8 +23,6 @@ async function main() {
 
   const apiKey = response.apiKey;
 
-  console.log(`Your API key is: ${apiKey}`);
-
   await initGraph();
 
   rl.close();
